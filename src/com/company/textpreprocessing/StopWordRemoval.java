@@ -9,6 +9,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.ListIterator;
 
+
+
 /**
  * Created with IntelliJ IDEA.
  * User: Shihab Rahman
@@ -21,19 +23,24 @@ public class StopWordRemoval
     public static String removeStopWord(String inputText) throws IOException {
 
 
+        //System.out.print(inputText);
         FileInputStream stopWordsFile = new FileInputStream(new File("./stopwords/stopwords.txt"));
         List<String> stopWordList = IOUtils.readLines(stopWordsFile);
       //  FileInputStream inputFile = new FileInputStream(new File("./webpages/input.txt"));
       //  String input = IOUtils.toString(inputFile, "UTF-8").toLowerCase().replaceAll("[^A-Za-z]", " ").replaceAll(" +", " ");
         String input = inputText.toLowerCase().replaceAll("[^A-Za-z]", " ").replaceAll(" +", " ");
+     //   System.out.println(input);
         ArrayList<String> inputWords = new ArrayList<String>(Arrays.asList(input.split(" ")));
 
         for(int i=0;i<stopWordList.size();i++)
         {
+
             int j=0;
             for (ListIterator<String> iterator = inputWords.listIterator(); iterator.hasNext();)
             {
+
                 String z = iterator.next();
+                //System.out.println(z);
                 if (z.equalsIgnoreCase(stopWordList.get(i)))
                 {
                     iterator.remove();

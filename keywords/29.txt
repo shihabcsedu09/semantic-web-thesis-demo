@@ -1,0 +1,14 @@
+joins 1 15
+olympique 1 3
+player 2 6
+lyonnais 1 3
+twitter 1 3
+happy 1 3
+napoli 2 6
+Friday 1 3
+cups 1 3
+league 1 3
+serie 1 3
+seasons 1 3
+owner 1 3
+local 1 3

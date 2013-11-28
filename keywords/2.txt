@@ -1,0 +1,16 @@
+hartal 2 18
+petrol 2 18
+bus 1 3
+correspondent 1 3
+sources 1 3
+miscreants 2 6
+place 1 3
+injured 1 3
+burn 1 3
+unique 1 3
+vehicle 1 3
+laxmibazar 1 3
+details 1 3
+star 1 3
+fire 1 3
+charge 1 3

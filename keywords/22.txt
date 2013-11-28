@@ -1,0 +1,12 @@
+takes 1 15
+ashwin 4 24
+test 4 12
+bowler 1 3
+bangladesh 1 3
+ravichandran 1 3
+points 1 3
+wickets 1 3
+career 1 3
+indies 1 3
+hasan 1 3
+west 1 3

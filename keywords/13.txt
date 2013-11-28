@@ -1,0 +1,16 @@
+vehicle 2 18
+capital 3 21
+college 1 3
+people 2 6
+medical 1 3
+badrul 1 3
+leguna 1 3
+bomb 1 3
+hospital 2 6
+development 1 3
+ashulia 2 6
+sheikh 1 3
+evening 2 6
+daily 1 3
+unit 1 3
+attack 1 3

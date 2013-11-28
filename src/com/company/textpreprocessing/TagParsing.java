@@ -24,8 +24,8 @@ public class TagParsing {
             Document doc = Jsoup.parse(input, "UTF-8", "http://example.com/");
             //   doc = Jsoup.connect(url).timeout(0).get();
             Elements elem = doc.select(tag);
-            // System.out.println("Tag : " + tag + "  Content : " + elem.text());
-             parsedString.add(elem.text());
+            //System.out.println("Tag : " + tag + "  Content : " + elem.text());
+            parsedString.add(elem.text());
 
         } catch (IOException e) {
             e.printStackTrace();

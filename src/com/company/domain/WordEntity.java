@@ -10,16 +10,10 @@ package com.company.domain;
 public class WordEntity
 {
     private String keywordName;
-
-    @Override
-    public String toString() {
-        return "WordEntity{" +
-                "keywordName='" + keywordName + '\'' +
-                ", keywordValue='" + keywordValue + '\'' +
-                '}';
-    }
-
     private String keywordValue;
+    private String keywordFrequency;
+
+
 
     public String getKeywordName() {
         return keywordName;
@@ -37,9 +31,18 @@ public class WordEntity
         this.keywordValue = keywordValue;
     }
 
-    public WordEntity(String keywordName, String keywordValue) {
+    public String getKeywordFrequency() {
+        return keywordFrequency;
+    }
+
+    public void setKeywordFrequency(String keywordFrequency) {
+        this.keywordFrequency = keywordFrequency;
+    }
+
+    public WordEntity(String keywordName, String keywordValue, String keywordFrequency) {
 
         this.keywordName = keywordName;
         this.keywordValue = keywordValue;
+        this.keywordFrequency = keywordFrequency;
     }
 }

@@ -1,0 +1,7 @@
+lose 1 15
+hero 2 18
+second 1 3
+siddikur 2 18
+course 1 3
+title 2 18
+rahman 1 3

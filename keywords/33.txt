@@ -1,0 +1,11 @@
+chess 2 18
+wfm 1 3
+masuda 1 3
+mahmuda 1 3
+zakia 2 6
+india 5 15
+grandmasters 1 3
+women 1 3
+begum 1 3
+supriya 1 3
+divya 1 3
