@@ -23,7 +23,7 @@ public class SimilarityValue {
         double commonWordWeight = 0;
         double weight = 0;
         double similarityValue = 0;
-        // System.out.println("First page "+firstPage+" Second page"+secondPage);
+
         ArrayList<WordEntity> keywordsFirst = new ArrayList<WordEntity>();
         ArrayList<WordEntity> keywordsSecond = new ArrayList<WordEntity>();
         Set<WordEntity> commonWords = new HashSet<WordEntity>();
@@ -73,7 +73,7 @@ public class SimilarityValue {
         for (WordEntity wordEntity : keywordsSecond)
         {
             if (Integer.parseInt(wordEntity.getKeywordFrequency()) >= 2 || Integer.parseInt(wordEntity.getKeywordValue()) >= 4) {
-               // keywordsSecondFinal.add(wordEntity);
+
                 weight = weight + Integer.parseInt(wordEntity.getKeywordValue());
                 keywordsSecondFinal.add(new WordEntity(wordEntity.getKeywordName(), wordEntity.getKeywordValue(), wordEntity.getKeywordFrequency()));
 
@@ -105,7 +105,7 @@ public class SimilarityValue {
                     System.out.println("y is : "+y);
                     if (x.equalsIgnoreCase(y))
                     {
-                      System.out.println("matched");
+                  //    System.out.println("matched");
                       commonWords.add(new WordEntity(keywordsFirstFinal.get(i).getKeywordName(), String.valueOf(commonWordWeight), keywordsFirstFinal.get(i).getKeywordFrequency()));
                       commonWordWeight = commonWordWeight+Integer.parseInt(keywordsFirstFinal.get(i).getKeywordValue()) + Integer.parseInt(keywordsSecondFinal.get(j).getKeywordValue());
                        keywordsSecondFinal.remove(j);

@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.clustering.MembershipMatrixInitialization;
 import com.company.domain.TagEntity;
 import com.company.domain.UniqueKeyWordEntity;
 import com.company.domain.WordEntity;
@@ -54,6 +55,9 @@ public class Main {
                 similarityMatrix[i][j]=2.0;
             }
         }
+
+        MembershipMatrixInitialization.initializeMembershipMatix(33,2);
+
         //initialization
 
 
@@ -74,7 +78,7 @@ public class Main {
                 if(similarityMatrix[i][j]==2.0)
                 {
 
-                    similarityValue = SimilarityValue.getSimilarityValue(String.valueOf(i),String.valueOf(j));
+                    similarityValue = Math.round(100.0 * SimilarityValue.getSimilarityValue(String.valueOf(i),String.valueOf(j))) / 100.0;
 
                     if(similarityValue<0.5 && similarityValue!=0.0)
                     {
