@@ -16,6 +16,14 @@ public class ClusterCentreEntity
         return clusterNumher;
     }
 
+    public double getClusterCenterValues() {
+        return clusterCenterValues;
+    }
+
+    public void setClusterCenterValues(double clusterCenterValues) {
+        this.clusterCenterValues = clusterCenterValues;
+    }
+
     public void setClusterNumher(int clusterNumher) {
         this.clusterNumher = clusterNumher;
     }

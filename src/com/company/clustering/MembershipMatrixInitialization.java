@@ -19,7 +19,7 @@ public class MembershipMatrixInitialization
         double randomValue;//
         String content="";
 
-        File memberShipMatrixfile = new File("./membershipmatrix/membershipmatrixInitial.txt");
+        File memberShipMatrixfile = new File("./membershipmatrix/membershipmatrix[0].txt");
         FileWriter fw = new FileWriter(memberShipMatrixfile.getAbsoluteFile());
         BufferedWriter bw = new BufferedWriter(fw);
 

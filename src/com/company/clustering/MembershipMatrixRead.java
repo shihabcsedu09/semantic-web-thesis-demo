@@ -1,12 +1,9 @@
 package com.company.clustering;
 
 
-
-
-
-
-
 import com.sun.org.glassfish.external.statistics.impl.TimeStatisticImpl;
+import util.ClusteringVariable;
+import util.PrintingMatrix;
 
 import java.io.*;
 
@@ -19,34 +16,31 @@ import java.io.*;
  */
 public class MembershipMatrixRead {
 
-    public static double[][] getMembershipMatrix(int numberOfValues,int numberOfClusters,int iterationNumber) {
-        double[][] membershipMatrix = new double[numberOfValues+1][numberOfClusters+1];
-        try
-        {
-        //for file reading
-        File file = new File("./membershipmatrix/membershipmatrix["+iterationNumber+"].txt");
-        FileReader fr = new FileReader(file.getAbsoluteFile());
-        BufferedReader br = new BufferedReader(fr);
-        //for file reading
+    public static double[][] getMembershipMatrix(int iterationNumber) {
+        double[][] membershipMatrix = new double[ClusteringVariable.numberOfValues + 1][ClusteringVariable.numberOfClusters + 1];
+        try {
+            //for file reading
+            File file = new File("./membershipmatrix/membershipmatrix[" + iterationNumber + "].txt");
+            FileReader fr = new FileReader(file.getAbsoluteFile());
+            BufferedReader br = new BufferedReader(fr);
+            //for file reading
 
-        String line = br.readLine();
-        for(int i=1;line!=null;i++)
-        {
-            String[] partsFirst = line.split(" ");
-            for(int j=1;j<=partsFirst.length;j++)
-            {
-               membershipMatrix[i][j]=Double.valueOf(partsFirst[j]);
+            String line = br.readLine();
+            for (int i = 1; line != null; i++) {
+                String[] partsFirst = line.split(" ");
+                for (int j = 1; j <= partsFirst.length; j++) {
+
+                    membershipMatrix[i][j] = Double.valueOf(partsFirst[j - 1]);
+
+                }
+                line = br.readLine();
             }
-            line = br.readLine();
-        }
-        br.close();
-        }
-        catch (IOException ex)
-        {
+            br.close();
+        } catch (Exception ex) {
 
         }
 
-
+        //  PrintingMatrix.printMatrix(membershipMatrix,ClusteringVariable.numberOfValues,ClusteringVariable.numberOfClusters);
         return membershipMatrix;
 
     }

@@ -1,7 +1,12 @@
 package com.company.clustering;
 
+import com.company.domain.ClusterCentreEntity;
+import util.ClusteringVariable;
+
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,13 +19,16 @@ public class Clustering {
 
 
     public static void clusterValues() throws IOException {
-        int numberOfClusters = 2;
-        int numberOfValues = 33;
-        int m = 2;//level of cluster fuzziness
-        double[][] membershipmatrix = new double[numberOfValues+1][numberOfClusters+1];
 
+        double[][] membershipmatrix = new double[ClusteringVariable.numberOfValues+1][ClusteringVariable.numberOfClusters+1];
+        ArrayList<ClusterCentreEntity> initialClusterCentres= new ArrayList<ClusterCentreEntity>(RandomelyChoosingCluster.chooseRandomClusters());
 
-        for(int i=1;i<=numberOfValues;i++)
+        for(ClusterCentreEntity intialCluster: initialClusterCentres)
+        {
+            System.out.println("Cluster Centre # "+intialCluster.getClusterNumher()+" Cluster Centre Value : "+intialCluster.getClusterCenterValues());
+        }
+
+       /* for(int i=1;i<=numberOfValues;i++)
         {
             for(int j=1;j<=numberOfClusters;j++)
             {
@@ -32,7 +40,12 @@ public class Clustering {
         for (int i = 0; i < 3; i++)
         {
             MembershipMatrixWrite.writeMembershipMatrix(33, 2,i,membershipmatrix );
-        }
+        }*/
+
+       // randomValue= rangeMin + (rangeMax - rangeMin) * r.nextDouble();
+        //for()
+
+
 
 
 
