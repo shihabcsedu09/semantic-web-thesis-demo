@@ -1,11 +1,11 @@
 package com.company.clustering;
 
 
-import com.sun.org.glassfish.external.statistics.impl.TimeStatisticImpl;
 import util.ClusteringVariable;
-import util.PrintingMatrix;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,7 +20,7 @@ public class MembershipMatrixRead {
         double[][] membershipMatrix = new double[ClusteringVariable.numberOfValues + 1][ClusteringVariable.numberOfClusters + 1];
         try {
             //for file reading
-            File file = new File("./membershipmatrix/membershipmatrix[" + iterationNumber + "].txt");
+            File file = new File("./membershipmatrix/membershipmatrix[" + iterationNumber + "]["+ClusteringVariable.dataFrom+"].txt");
             FileReader fr = new FileReader(file.getAbsoluteFile());
             BufferedReader br = new BufferedReader(fr);
             //for file reading
@@ -40,7 +40,7 @@ public class MembershipMatrixRead {
 
         }
 
-        //  PrintingMatrix.printMatrix(membershipMatrix,ClusteringVariable.numberOfValues,ClusteringVariable.numberOfClusters);
+
         return membershipMatrix;
 
     }

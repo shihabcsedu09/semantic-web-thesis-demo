@@ -1,12 +1,15 @@
 package com.company.matsim;
 
 import com.company.domain.WordEntity;
-import edu.stanford.nlp.util.Index;
 
-import java.io.*;
-import java.util.*;
-
-import static com.company.textpreprocessing.KeywordGeneration.generateKeywords;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Random;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,9 +20,7 @@ import static com.company.textpreprocessing.KeywordGeneration.generateKeywords;
  */
 public class SimilarityValue {
 
-
-    public static double getSimilarityValue(String firstPage, String secondPage) throws IOException
-    {
+        public static double getSimilarityValue(String firstPage, String secondPage) throws IOException {
         double commonWordWeight = 0;
         double weight = 0;
         double similarityValue = 0;
@@ -58,21 +59,18 @@ public class SimilarityValue {
         ArrayList<WordEntity> keywordsFirstFinal = new ArrayList<WordEntity>();
         ArrayList<WordEntity> keywordsSecondFinal = new ArrayList<WordEntity>();
 
-        for (WordEntity wordEntity : keywordsFirst)
-        {
-            if (Integer.parseInt(wordEntity.getKeywordFrequency()) >= 2 || Integer.parseInt(wordEntity.getKeywordValue()) >= 4) {
+        for (WordEntity wordEntity : keywordsFirst) {
+            if (Integer.parseInt(wordEntity.getKeywordFrequency()) >= 2 || Integer.parseInt(wordEntity.getKeywordValue()) >= 3) {
                 weight = weight + Integer.parseInt(wordEntity.getKeywordValue());
                 keywordsFirstFinal.add(new WordEntity(wordEntity.getKeywordName(), wordEntity.getKeywordValue(), wordEntity.getKeywordFrequency()));
-               // System.out.println("Keyword name 1 : " + wordEntity.getKeywordName() + " Keyword frequency 1 : " + wordEntity.getKeywordFrequency() + " Keyword Weight : " + wordEntity.getKeywordValue());
+                // System.out.println("Keyword name 1 : " + wordEntity.getKeywordName() + " Keyword frequency 1 : " + wordEntity.getKeywordFrequency() + " Keyword Weight : " + wordEntity.getKeywordValue());
             }
 
         }
 
 
-
-        for (WordEntity wordEntity : keywordsSecond)
-        {
-            if (Integer.parseInt(wordEntity.getKeywordFrequency()) >= 2 || Integer.parseInt(wordEntity.getKeywordValue()) >= 4) {
+        for (WordEntity wordEntity : keywordsSecond) {
+            if (Integer.parseInt(wordEntity.getKeywordFrequency()) >= 2 || Integer.parseInt(wordEntity.getKeywordValue()) >= 3) {
 
                 weight = weight + Integer.parseInt(wordEntity.getKeywordValue());
                 keywordsSecondFinal.add(new WordEntity(wordEntity.getKeywordName(), wordEntity.getKeywordValue(), wordEntity.getKeywordFrequency()));
@@ -81,38 +79,31 @@ public class SimilarityValue {
 
         }
 
-        for(WordEntity wordEntity:keywordsFirstFinal)
-        {
-            System.out.println("Keyword name 1 : " + wordEntity.getKeywordName() + " Keyword frequency  : " + wordEntity.getKeywordFrequency() + " Keyword Weight : " + wordEntity.getKeywordValue());
+        for (WordEntity wordEntity : keywordsFirstFinal) {
+         //   System.out.println("Keyword name 1 : " + wordEntity.getKeywordName() + " Keyword frequency  : " + wordEntity.getKeywordFrequency() + " Keyword Weight : " + wordEntity.getKeywordValue());
         }
 
 
-        for(WordEntity wordEntity:keywordsSecondFinal)
-        {
-            System.out.println("Keyword name 2 : " + wordEntity.getKeywordName() + " Keyword frequency  : " + wordEntity.getKeywordFrequency() + " Keyword Weight : " + wordEntity.getKeywordValue());
+        for (WordEntity wordEntity : keywordsSecondFinal) {
+          //  System.out.println("Keyword name 2 : " + wordEntity.getKeywordName() + " Keyword frequency  : " + wordEntity.getKeywordFrequency() + " Keyword Weight : " + wordEntity.getKeywordValue());
         }
-
-
 
 
         try {
-            for (int i = 0; i < keywordsFirstFinal.size(); i++)
-            {
+            for (int i = 0; i < keywordsFirstFinal.size(); i++) {
                 String x = keywordsFirstFinal.get(i).getKeywordName();
-                System.out.println("x is : "+x);
+             //   System.out.println("x is : " + x);
                 for (int j = 0; j < keywordsSecondFinal.size(); j++) {
                     String y = keywordsSecondFinal.get(j).getKeywordName();
-                    System.out.println("y is : "+y);
-                    if (x.equalsIgnoreCase(y))
-                    {
-                  //    System.out.println("matched");
-                      commonWords.add(new WordEntity(keywordsFirstFinal.get(i).getKeywordName(), String.valueOf(commonWordWeight), keywordsFirstFinal.get(i).getKeywordFrequency()));
-                      commonWordWeight = commonWordWeight+Integer.parseInt(keywordsFirstFinal.get(i).getKeywordValue()) + Integer.parseInt(keywordsSecondFinal.get(j).getKeywordValue());
-                       keywordsSecondFinal.remove(j);
-                       keywordsSecondFinal.trimToSize();
+                   // System.out.println("y is : " + y);
+                    if (x.equalsIgnoreCase(y)) {
+                        //    System.out.println("matched");
+                        commonWords.add(new WordEntity(keywordsFirstFinal.get(i).getKeywordName(), String.valueOf(commonWordWeight), keywordsFirstFinal.get(i).getKeywordFrequency()));
+                        commonWordWeight = commonWordWeight + Integer.parseInt(keywordsFirstFinal.get(i).getKeywordValue()) + Integer.parseInt(keywordsSecondFinal.get(j).getKeywordValue());
+                        keywordsSecondFinal.remove(j);
+                        keywordsSecondFinal.trimToSize();
                     }
-               }
-
+                }
 
 
             }
@@ -122,21 +113,29 @@ public class SimilarityValue {
 
 
         for (WordEntity commonword : commonWords) {
-            System.out.println("The Word " + commonword.getKeywordName() + " is common and value is " + commonword.getKeywordValue());
+          //  System.out.println("The Word " + commonword.getKeywordName() + " is common and value is " + commonword.getKeywordValue());
         }
 
 
-        similarityValue = (commonWordWeight) / weight;
+        similarityValue = 1.0-((commonWordWeight) / weight);
 
-        System.out.println("Common " + commonWordWeight);
-        System.out.println("Total " + weight);
+       // System.out.println("Common " + commonWordWeight);
+      //  System.out.println("Total " + weight);
 
 
         // System.out.println("Total Weight " + weight);
         // System.out.println("Common Word Weight " + commonWordWeight);
+      /*  System.out.println("Similarity between "+ firstPage+" "+secondPage);
+        System.out.println("Value of similarity before  "+ similarityValue);
+        similarityValue=Math.abs(similarityValue-1.0);
+        System.out.println("Value of similarity " + similarityValue);*/
 
+ /*       Random r=new Random();
+        double randomValue= 0.0 + (1.0 - 0.0) * r.nextDouble();*/
 
-        return similarityValue;
+       if (similarityValue > 0.5 || similarityValue == 1.0) return (similarityValue);
+       else return (similarityValue);
+      // return randomValue;
     }
 }
 

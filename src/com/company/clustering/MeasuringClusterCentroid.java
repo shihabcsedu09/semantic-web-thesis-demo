@@ -1,7 +1,6 @@
 package com.company.clustering;
 
 import util.ClusteringVariable;
-import util.PrintingMatrix;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,17 +14,18 @@ public class MeasuringClusterCentroid {
         double numerator = 0.0;
         double denominator = 0.0;
         double[][] membershipMatrix;
-
+        System.out.println();
         membershipMatrix = MembershipMatrixRead.getMembershipMatrix(iterationNumber);
-      //  PrintingMatrix.printMatrix(membershipMatrix,ClusteringVariable.numberOfValues,ClusteringVariable.numberOfClusters);
-        for (int i = 1; i <= ClusteringVariable.numberOfValues; i++)
-        {
 
-            numerator = numerator + Math.pow(membershipMatrix[i][clusterNumber] * i, ClusteringVariable.m);
+
+        for (int i = 1; i <= ClusteringVariable.numberOfValues; i++) {
+            numerator = numerator + Math.pow(membershipMatrix[i][clusterNumber], ClusteringVariable.m) * i;
             denominator = denominator + Math.pow(membershipMatrix[i][clusterNumber], ClusteringVariable.m);
-         //   System.out.println(" ( "+membershipMatrix[i][clusterNumber]+" * "+i+" )^ "+ ClusteringVariable.m+" = "+numerator+" : "+denominator);
+            //System.out.println(" ( "+membershipMatrix[i][clusterNumber]+" * "+i+" )^ "+ ClusteringVariable.m+" = "+numerator+" : "+denominator);
         }
 
-        return numerator/denominator;
+        if(Double.isNaN(denominator)||Double.isNaN(numerator)) return 1.0;
+        else return numerator / denominator;
+
     }
 }

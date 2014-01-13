@@ -1,0 +1,7 @@
+time 2 20
+talks 2 19
+urgency 2 20
+ipad 1 7
+correspondent 1 7
+polls 1 5
+nisha 1 3

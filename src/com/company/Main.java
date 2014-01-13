@@ -2,27 +2,11 @@ package com.company;
 
 import com.company.clustering.Clustering;
 import com.company.clustering.MembershipMatrixInitialization;
-import com.company.clustering.RandomelyChoosingCluster;
-import com.company.domain.TagEntity;
-import com.company.domain.UniqueKeyWordEntity;
-import com.company.domain.WordEntity;
 import com.company.matsim.KeywordsFileCreation;
 import com.company.matsim.SimilarityValue;
-import com.company.textpreprocessing.KeywordGeneration;
-import com.company.textpreprocessing.POSTagging;
-import com.company.textpreprocessing.StopWordRemoval;
-import com.company.textpreprocessing.TagParsing;
-import edu.stanford.nlp.ling.TaggedWord;
-import edu.stanford.nlp.tagger.maxent.MaxentTagger;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
-import org.jsoup.nodes.Element;
-import util.DBConnect;
+import util.ClusteringVariable;
 
 import java.io.*;
-import java.net.URL;
-import java.util.*;
 
 
 public class Main {
@@ -30,28 +14,28 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        int newsNumber = 34;
+        int newsNumber = ClusteringVariable.numberOfValues;
         double similarityValue;
         double similarityValueFinal;
         String content = "";
-        double similarityMatrix[][] = new double[newsNumber][newsNumber];
+        double similarityMatrix[][] = new double[newsNumber+1][newsNumber+1];
 
-      /*  for(int i=1;i<newsNumber;i++)
+    /*   for(int i=45;i<newsNumber;i++)
         {
             KeywordsFileCreation.createFile(String.valueOf(i));
-        }*/
-
+        }
+*/
         //initialization
 
-       /* for (int i = 0; i < newsNumber; i++) {
-            for (int j = 0; j < newsNumber; j++) {
+       for (int i = 1; i <= newsNumber; i++) {
+            for (int j = 1; j <= newsNumber; j++) {
                 similarityMatrix[i][j] = 2.0;
             }
-        }*/
-        //initialization
+        }
 
 
-       /* File file = new File("value.txt");
+
+        File file = new File("value.txt");
         // if file doesnt exists, then create it
         if (!file.exists()) {
             file.createNewFile();
@@ -59,8 +43,8 @@ public class Main {
         FileWriter fw = new FileWriter(file.getAbsoluteFile());
         BufferedWriter bw = new BufferedWriter(fw);
 
-        for (int i = 1; i < newsNumber; i++) {
-            for (int j = 1; j < newsNumber; j++) {
+        for (int i = 1; i <= newsNumber; i++) {
+            for (int j = 1; j <= newsNumber; j++) {
 
                 if (similarityMatrix[i][j] == 2.0) {
 
@@ -83,8 +67,8 @@ public class Main {
         }
 
 
-        for (int i = 1; i < newsNumber; i++) {
-            for (int j = 1; j < newsNumber; j++) {
+        for (int i = 1; i <= newsNumber; i++) {
+            for (int j = 1; j <= newsNumber; j++) {
                 bw.write(String.valueOf(similarityMatrix[i][j]) + " ");
 
             }
@@ -94,10 +78,20 @@ public class Main {
         }
         bw.close();
 
-     */
-        MembershipMatrixInitialization.initializeMembershipMatix(4,2);
-       // RandomelyChoosingCluster.chooseRandomClusters();
-        Clustering.clusterValues();
+
+        MembershipMatrixInitialization.initializeMembershipMatixFromData();
+       // ChoosingInitialClusters.chooseRandomClusters();
+        ClusteringVariable.dataFrom="RANDOM";
+        Clustering.clusterValues("RANDOM");
+        ClusteringVariable.dataFrom="DATA";
+        Clustering.clusterValues("DATA");
+      //*  System.out.println(5.7-Math.floor(5.7));
+        //System.out.println(Math.floor(5.6+1)); *//*
+
+
+    //  System.out.print(UpdatingMembershipMatrix.getDistanceBetweenCentroidAndData(3.6,2));
+
+
     }
 
 }
