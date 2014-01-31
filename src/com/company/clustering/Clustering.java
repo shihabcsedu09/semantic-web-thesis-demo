@@ -19,10 +19,9 @@ public class Clustering {
     public static void clusterValues(String dataFrom) throws IOException {
 
 
-
         double[][] membershipmatrix = new double[ClusteringVariable.numberOfValues + 1][ClusteringVariable.numberOfClusters + 1];
-        if(ClusteringVariable.dataFrom=="DATA")   MembershipMatrixInitialization.initializeMembershipMatixFromData();
-        else  MembershipMatrixInitialization.initializeMembershipMatix();
+        if (ClusteringVariable.dataFrom == "DATA") MembershipMatrixInitialization.initializeMembershipMatixFromData();
+        else MembershipMatrixInitialization.initializeMembershipMatix();
 
         ArrayList<ClusterCentreEntity> initialClusterCentres = new ArrayList<ClusterCentreEntity>(ChoosingInitialClusters.chooseInitialClusters(dataFrom));
 
@@ -37,8 +36,6 @@ public class Clustering {
             }
             UpdatingMembershipMatrix.updateMembershipMatrix(i, clusters);
         }
-
-
 
 
     }
