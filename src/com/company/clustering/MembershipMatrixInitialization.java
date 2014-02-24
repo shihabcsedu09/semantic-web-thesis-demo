@@ -60,14 +60,13 @@ public class MembershipMatrixInitialization {
         for (int i = 1; i <= ClusteringVariable.numberOfClusters; i++) {
             randomValue = (int) (rangeMin + (Math.random() * (rangeMax - rangeMin)));
             randomClusters.add(i-1, new ClusterCentreEntity(i, randomValue));
-            System.out.println("Random Value is " + randomValue);
+      //      System.out.println("Random Value is " + randomValue);
         }
  /*       randomClusters.add(new ClusterCentreEntity(1,1.0));
         randomClusters.add(new ClusterCentreEntity(2,2.0));*/
 
         // System.out.print(randomClusters);
-        UpdatingMembershipMatrix.updateMembershipMatrix(-1,randomClusters);
-     /*
+       // UpdatingMembershipMatrix.updateMembershipMatrix(-1,randomClusters);
         for (int i = 1; i <= ClusteringVariable.numberOfValues; i++) {
 
             for (int j = 1; j <= ClusteringVariable.numberOfClusters; j++) {
@@ -83,7 +82,7 @@ public class MembershipMatrixInitialization {
             bw.flush();
             content = "";
         }
-        bw.close();*/
+        bw.close();
 
     }
 

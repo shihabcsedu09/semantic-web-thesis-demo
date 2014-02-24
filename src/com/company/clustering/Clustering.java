@@ -1,6 +1,9 @@
 package com.company.clustering;
 
 import com.company.domain.ClusterCentreEntity;
+import com.company.domain.MembershipEntity;
+import com.company.performance_evaluation.ClusterWisePagesWriting;
+import com.company.performance_evaluation.GettingSortedPages;
 import util.ClusteringVariable;
 
 import java.io.IOException;
@@ -36,6 +39,10 @@ public class Clustering {
             }
             UpdatingMembershipMatrix.updateMembershipMatrix(i, clusters);
         }
+
+       // GettingSortedPages.getSortedPages();
+        ClusterWisePagesWriting.writeClusterWisePages();
+
 
 
     }

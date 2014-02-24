@@ -3,7 +3,7 @@ package com.company.domain;
 /**
  * Created by Shihab on 1/30/14.
  */
-public class MembershipEntity
+public class MembershipEntity implements Comparable<MembershipEntity>
 {
     public int pageNumber;
     public int clusterNumber;
@@ -37,5 +37,19 @@ public class MembershipEntity
 
     public void setMembershipValue(double membershipValue) {
         this.membershipValue = membershipValue;
+    }
+
+    @Override
+    public int compareTo(MembershipEntity o) {
+        double membershipValue = ((MembershipEntity) o).getMembershipValue();
+
+        if(this.membershipValue>=membershipValue)
+            return -1;
+        else return 1;
+        //ascending order
+        //return (int)(this.membershipValue - membershipValue);
+
+        //descending order
+        //return compareQuantity - this.quantity;
     }
 }

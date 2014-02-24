@@ -1,0 +1,90 @@
+
+
+
+
+*****Cluster Number 1
+
+
+
+Number 36 Title [EC for all-party polls | Urges president to make efforts to ensure participation of all]  [ 0.9999883759754891 ]
+Number 43 Title [News Analysis | Testing time for president]  [ 0.7263350542351983 ]
+Number 56 Title [India to host U-17 WC]  [ 0.5698741772005067 ]
+Number 45 Title [President Gives Time Today | Khaleda to urge him to weigh in]  [ 0.47523479907976646 ]
+Number 53 Title [Hartal in Sylhet for Sunday, Monday, Wednesday]  [ 0.44943574140873904 ]
+Number 54 Title [Hartals aimed at delaying war crimes trial | Says Shahriar Kabir]  [ 0.44943574140873904 ]
+Number 4 Title [Khaleda responsible for hartal deaths: PM]  [ 0.42831316659979707 ]
+Number 15 Title [Khaleda responsible for hartal deaths: PM]  [ 0.42831316659979707 ]
+Number 9 Title [PM remark bad signal for democracy: BNP | 18-party alliance to hold rally June 22]  [ 0.39944622718188905 ]
+Number 20 Title [PM remark bad signal for democracy: BNP | 18-party alliance to hold rally June 22]  [ 0.39944622718188905 ]
+
+
+
+
+*****Cluster Number 2
+
+
+
+Number 39 Title [Go for talks, immediately | US official stresses urgency as polls-time cabinet formed]  [ 0.9999999999966278 ]
+Number 40 Title [Initiate talks for all-party polls | Khaleda urges president, gets assurance of his 'efforts within constitutional powers']  [ 0.8618039813296484 ]
+Number 41 Title [JP Quits Alliance, Joins Polls-time Govt | Ershad now asks BNP to follow suit]  [ 0.7513852600493728 ]
+Number 35 Title [Confusion runs high | Govt yet to notify size of polls-time cabinet]  [ 0.7376262995225534 ]
+Number 42 Title [News Analysis | Govt’s authority remains as it is]  [ 0.5746124316196047 ]
+Number 24 Title [Blatter insistent on winter World Cup]  [ 0.5698741772005067 ]
+Number 12 Title [Arrested BNP top leaders might be released if opposition promises to shun path 'anarchy': Hasan Mahmud]  [ 0.5565503349718943 ]
+Number 72 Title [‘Have to play fearless cricket’]  [ 0.5438352903242709 ]
+Number 74 Title [JP ministers seek PMs appointment to submit resignation;]  [ 0.507899820776798 ]
+Number 45 Title [President Gives Time Today | Khaleda to urge him to weigh in]  [ 0.47523479907976646 ]
+
+
+
+
+*****Cluster Number 3
+
+
+
+Number 6 Title [Ministers showed intention to resign: Shafique]  [ 0.26830549884744326 ]
+Number 17 Title [Ministers showed intention to resign: Shafique]  [ 0.26830549884744326 ]
+Number 65 Title [U-19s start with a win]  [ 0.25071468511283657 ]
+Number 11 Title [Govt disrupts Khaleda's food, water supply: BNP secy general Ruhul Kabir Rizvi]  [ 0.24742661540072722 ]
+Number 28 Title [Mohammedan keep leading]  [ 0.2421525185325004 ]
+Number 5 Title [Khaleda to be arrested if terrorism continues: Qamrul]  [ 0.239642807079795 ]
+Number 16 Title [Khaleda to be arrested if terrorism continues: Qamrul]  [ 0.239642807079795 ]
+Number 61 Title [Secret burial for Nazi war criminal]  [ 0.23252590650980884 ]
+Number 71 Title [War crimes, 1971 memories and justice]  [ 0.23252590650980884 ]
+Number 55 Title [I’m the chairman: Ershad]  [ 0.22714606096117346 ]
+
+
+
+
+*****Cluster Number 4
+
+
+
+Number 38 Title [Flour at Subsidised Price | Consumers forced to pay higher]  [ 0.9988596041831003 ]
+Number 34 Title [Bangladeshi workers in KL will face no hassles | Malaysian PM assures Hasina of taking care of the expats' wellbeing]  [ 0.26252754417217034 ]
+Number 32 Title [Walton Refregerator Dhaka Premier Division Cricket League 13 | Prime Bank in Super League]  [ 0.24339871353723436 ]
+Number 26 Title [Fixing Scandal | Panel starts work finally]  [ 0.24293505077651895 ]
+Number 10 Title [Scrap govt officers’ spl privileges: Pro-BNP lawyers]  [ 0.23410279603810322 ]
+Number 50 Title [Brasil 2014 Fifa World Cup<br>2014 World Cup Draw Held | Brazil meet Croatia in opening match]  [ 0.23410279603810322 ]
+Number 69 Title [War Crimes Trial | Alim appeals for acquittal]  [ 0.23410279603810322 ]
+Number 48 Title [Badminton finals today]  [ 0.22453136198566015 ]
+Number 63 Title [Special Olympics | BD finish on a high]  [ 0.22453136198566015 ]
+Number 73 Title [18 war crimes charges pressed against Qaiser]  [ 0.22453136198566015 ]
+
+
+
+
+*****Cluster Number 5
+
+
+
+Number 37 Title [Editorial | ‘All-party’ government in name only | Can't break the impasse Political turmoil over Bangladesh's next general election]  [ 0.9999999961983854 ]
+Number 28 Title [Mohammedan keep leading]  [ 0.47703926450329903 ]
+Number 66 Title [UN for urgent talks | Says time limited to reach acceptable formula for inclusive, non-violent polls]  [ 0.43035231103929067 ]
+Number 6 Title [Ministers showed intention to resign: Shafique]  [ 0.42055840729884475 ]
+Number 17 Title [Ministers showed intention to resign: Shafique]  [ 0.42055840729884475 ]
+Number 11 Title [Govt disrupts Khaleda's food, water supply: BNP secy general Ruhul Kabir Rizvi]  [ 0.3840190531699958 ]
+Number 22 Title [Ashwin takes Shakib’s place]  [ 0.3318486407696551 ]
+Number 65 Title [U-19s start with a win]  [ 0.3112305332258721 ]
+Number 59 Title [NATION MOURNS NELSON MANDELA | Withdraw blockade, Hasina urges Khaleda]  [ 0.3061823734055184 ]
+Number 61 Title [Secret burial for Nazi war criminal]  [ 0.2866974968691327 ]
