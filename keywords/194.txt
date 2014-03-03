@@ -1,0 +1,17 @@
+child 1 15
+college 1 3
+workers 1 3
+aged 1 3
+move 1 3
+hours 1 3
+kids 2 6
+fag 1 3
+anonymity 1 3
+large 1 3
+votes 3 9
+ruling 2 6
+poling 1 3
+shahara 1 3
+organisers 1 3
+journalists 2 6
+high 1 3

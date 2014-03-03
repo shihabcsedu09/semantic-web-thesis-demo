@@ -1,0 +1,16 @@
+concerned 1 15
+provide 1 3
+hossain 1 3
+witnesses 3 9
+tribunal 2 6
+crimes 3 9
+international 1 3
+mostafa 2 6
+securities 1 3
+hospital 1 3
+justice 1 3
+today 2 6
+war 2 6
+leader 2 6
+cases 1 3
+special 1 3

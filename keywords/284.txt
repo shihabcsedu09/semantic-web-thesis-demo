@@ -1,0 +1,15 @@
+kendra 2 18
+bishwa 2 18
+total 2 6
+award 2 6
+habits 1 3
+divisional 1 3
+founder 1 3
+chittagong 1 3
+cities 2 6
+prize 1 3
+ramna 1 3
+ceremonies 1 3
+institution 1 3
+students 4 12
+school 1 3

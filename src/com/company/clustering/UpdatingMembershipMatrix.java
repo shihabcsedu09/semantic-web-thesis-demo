@@ -1,6 +1,7 @@
 package com.company.clustering;
 
 import com.company.domain.ClusterCentreEntity;
+import com.company.matsim.GettingDistanceValue;
 import com.company.matsim.SimilarityValue;
 import util.ClusteringVariable;
 import util.PrintingMatrix;
@@ -40,8 +41,8 @@ public class UpdatingMembershipMatrix {
 
                 //  System.out.println("Membership Value  :  "+membershipValue);
                 membershipValue = Math.pow(denominator, -1);
-                //  System.out.println("Membership Value denominator  :  " + denominator);
-                // System.out.println("Membership Value  :  " + membershipValue);
+             //   System.out.println("Membership Value denominator  :  " + denominator);
+               // System.out.println("Membership Value  :  " + membershipValue);
 
                 membershipmatrixUpdated[x][clusterCenter.getClusterNumher()] = membershipValue;
                 membershipValue = 0.0;
@@ -57,7 +58,20 @@ public class UpdatingMembershipMatrix {
     public static double getDistanceBetweenCentroidAndData(double centroid, int data) throws IOException, NumberFormatException {
        // System.out.println("Centroid Value " + centroid);
        // System.out.println("Measuring Distance Between  " + data + " and " + String.valueOf(new BigDecimal(Math.floor(centroid)).intValueExact()));
-        double similarityValueWithFloor = SimilarityValue.getSimilarityValue(String.valueOf(data), String.valueOf(new BigDecimal(Math.floor(centroid)).intValueExact()));
+
+     /*   if( (Math.ceil(centroid)-centroid)>=0.5)
+        {
+            return SimilarityValue.getSimilarityValue(String.valueOf(data), String.valueOf(new BigDecimal(Math.floor(centroid)).intValueExact()));
+        }
+
+        else
+        {
+            return SimilarityValue.getSimilarityValue(String.valueOf(data), String.valueOf(new BigDecimal(Math.ceil(centroid)).intValueExact()));
+        }
+*/
+
+
+        double similarityValueWithFloor = GettingDistanceValue.getDistance(data,new BigDecimal(Math.floor(centroid)).intValueExact());
       //  System.out.println("Distance is " + similarityValueWithFloor);
         double difference = (centroid - Math.floor(centroid)) * 100;
         if (difference == 0.0) {
@@ -65,7 +79,7 @@ public class UpdatingMembershipMatrix {
         }
         //System.out.println("0 diffrence "+difference);
      //   System.out.println("Measuring Distance Between  " + data + " and " + String.valueOf(new BigDecimal(Math.ceil(centroid)).intValueExact()));
-        double similarityValueWithCeiling = SimilarityValue.getSimilarityValue(String.valueOf(data), String.valueOf(new BigDecimal(Math.ceil(centroid)).intValueExact()));
+        double similarityValueWithCeiling = GettingDistanceValue.getDistance(data, new BigDecimal(Math.ceil(centroid)).intValueExact());
      //   System.out.println("Distance is " + similarityValueWithCeiling);
         double distance = (similarityValueWithFloor + ((similarityValueWithCeiling - similarityValueWithFloor) / 100) * difference);
         return Math.round(100.0 * distance) / 100.0;

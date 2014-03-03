@@ -1,0 +1,12 @@
+winning 1 15
+emirates 1 3
+chess 1 3
+saberi 1 3
+abdrashev 1 3
+fahad 2 6
+iran 1 3
+yesterday 1 3
+youth 1 3
+jump 1 3
+ain 1 3
+big 1 3

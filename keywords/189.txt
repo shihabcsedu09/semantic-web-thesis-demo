@@ -1,0 +1,13 @@
+cold 2 18
+collects 1 15
+manager 1 3
+zafar 1 3
+people 2 18
+hit 1 3
+bank 4 12
+responsibility 1 3
+sibl 1 3
+director 3 9
+farhad 1 3
+program 1 3
+blankets 3 9

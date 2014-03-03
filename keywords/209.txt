@@ -1,0 +1,13 @@
+cops 1 15
+savar 2 18
+alleged 1 3
+abm 1 3
+dhaka 1 3
+police 1 3
+nasir 1 3
+outskirts 1 3
+walkie 1 3
+afternoon 1 3
+impersonating 2 18
+hakim 1 3
+microbus 1 3

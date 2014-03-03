@@ -9,12 +9,14 @@ package util;
  */
 public class ClusteringVariable
 {
-    public static final int numberOfClusters=5;
-    public static final int numberOfValues=74;
+    public static final int numberOfClusters=10;
+    public static final int numberOfValues=319;
     public static final double m=1.1;
-    public static final int numberOfIteration=5;
+    public static final int numberOfIteration=3;
     public static  String dataFrom="";
     public static final int numberOfPagesPerCluster=10;
-
+    public static final int frequencyThresold=2;
+    public static final int weightThresold=3;
+    public static String similarityMeasurement="";//COSINE/JACARD
 
 }

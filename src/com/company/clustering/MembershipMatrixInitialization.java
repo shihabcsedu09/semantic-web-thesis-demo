@@ -1,6 +1,7 @@
 package com.company.clustering;
 
 import com.company.domain.ClusterCentreEntity;
+import com.company.matsim.GettingDistanceValue;
 import com.company.matsim.SimilarityValue;
 import util.ClusteringVariable;
 
@@ -60,7 +61,7 @@ public class MembershipMatrixInitialization {
         for (int i = 1; i <= ClusteringVariable.numberOfClusters; i++) {
             randomValue = (int) (rangeMin + (Math.random() * (rangeMax - rangeMin)));
             randomClusters.add(i-1, new ClusterCentreEntity(i, randomValue));
-      //      System.out.println("Random Value is " + randomValue);
+       //     System.out.println("Random Value is " + randomValue);
         }
  /*       randomClusters.add(new ClusterCentreEntity(1,1.0));
         randomClusters.add(new ClusterCentreEntity(2,2.0));*/
@@ -74,7 +75,7 @@ public class MembershipMatrixInitialization {
                 ClusterCentreEntity cluster = randomClusters.get(j-1);
                 //  UpdatingMembershipMatrix.updateMembershipMatrix(0,randomClusters);
 
-                double similarityValue = Math.round(100.0 * SimilarityValue.getSimilarityValue(String.valueOf(i), String.valueOf(cluster.clusterNumher))) / 100.0;
+                double similarityValue = Math.round(100.0 * GettingDistanceValue.getDistance(i, cluster.clusterNumher)) / 100.0;
                 content = content.concat(similarityValue + " ");
             }
             bw.write(content);

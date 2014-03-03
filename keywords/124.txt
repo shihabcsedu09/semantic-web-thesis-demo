@@ -1,0 +1,12 @@
+final 4 24
+tournament 1 3
+enayet 1 3
+reach 1 3
+event 1 3
+paints 1 3
+shuttler 1 3
+beat 1 3
+opponents 1 3
+semifinal 1 3
+wooden 1 3
+summer 1 3

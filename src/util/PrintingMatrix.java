@@ -1,5 +1,10 @@
 package util;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Sheab
@@ -9,15 +14,30 @@ package util;
  */
 public class PrintingMatrix
 {
-    public static void printMatrix(double[][] matrix,int m,int n)
-    {
+    public static void printMatrix(double[][] matrix,int m,int n) throws IOException {
+
+        String content="";
+        File file = new File("distance.txt");
+        // if file doesnt exists, then create it
+        if (!file.exists()) {
+            file.createNewFile();
+        }
+        FileWriter fw = new FileWriter(file.getAbsoluteFile());
+        BufferedWriter bw = new BufferedWriter(fw);
         for(int i=1;i<=m;i++)
         {
             for(int j=1;j<=n;j++)
             {
-                System.out.print(matrix[i][j]+" ");
+              //  System.out.println("Value of "+matrix[i][j]  );
+                content=content.concat(String.valueOf(matrix[i][j])+" ");
             }
-            System.out.println();
+            bw.write(content);
+            bw.newLine();
+            bw.flush();
+            content="";
         }
+        bw.close();
+
+
     }
 }

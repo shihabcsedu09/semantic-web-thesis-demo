@@ -1,0 +1,12 @@
+swadesh 3 21
+player 1 3
+score 1 3
+real 1 3
+hit 1 3
+khan 1 3
+wickets 1 3
+yesterday 1 3
+scoring 2 6
+stadium 1 3
+runs 3 9
+estate 1 3

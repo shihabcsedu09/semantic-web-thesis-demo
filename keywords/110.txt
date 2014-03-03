@@ -1,0 +1,13 @@
+bronze 2 18
+islamic 2 18
+indonesian 1 3
+recurve 1 3
+sriwijaya 1 3
+palembang 1 3
+haque 1 3
+games 1 3
+yesterday 1 3
+semifinal 1 3
+women 1 3
+category 1 3
+medal 2 6

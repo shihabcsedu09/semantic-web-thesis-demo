@@ -1,0 +1,14 @@
+hurt 1 15
+attack 1 15
+president 1 3
+college 3 9
+nazim 2 6
+shakhawat 1 3
+premises 1 3
+abdullah 1 3
+formation 1 3
+dmch 1 3
+dal 1 3
+protesting 1 3
+committee 4 12
+kafi 1 3
