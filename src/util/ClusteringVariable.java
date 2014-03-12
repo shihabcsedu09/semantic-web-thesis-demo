@@ -9,8 +9,8 @@ package util;
  */
 public class ClusteringVariable
 {
-    public static final int numberOfClusters=10;
-    public static final int numberOfValues=319;
+    public static final int numberOfClusters=6;
+    public static final int numberOfValues=20;
     public static final double m=1.1;
     public static final int numberOfIteration=3;
     public static  String dataFrom="";

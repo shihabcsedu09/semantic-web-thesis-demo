@@ -1,0 +1,74 @@
+*****Cluster Number 1
+
+Title [Arrested BNP top leaders might be released if opposition promises to shun path 'anarchy' Hasan Mahmud]0.913544179575204
+Title [Khaleda responsible for hartal deaths: Prime Minister ]0.8944909419731344
+Title [Khaleda to be arrested if terrorism continues: Qamrul]0.45344755718291024
+Title [Hartals aimed at delaying war crimes trial | Says Shahriar Kabir]0.3509784199200694
+Title [48-hr hartal from Monday]0.32171132474846187
+Title [Stop tormenting people with blockades | Hasina urges Khaleda]0.3200252034475092
+Title [Khaleda comes under fire at JS]0.3152483612933527
+Title [Quizzical silence | Court highlights reaction of the then Prime Minister  Khaleda]0.2793063256750609
+Title [Khaleda responsible for hartal deaths: Prime Minister ]0.17234084616294404
+Title [Khaleda to be arrested if terrorism continues: Qamrul]0.08559547390928988
+
+
+*****Cluster Number 2
+
+
+Title [Black Flag Procession | BNP denied permission]0.5620752366447268
+Title [Prime Minister  terms BNP, Jamaat's politics 'militancy']0.4678149653790135
+Title [Scrap govt officers’ spl privileges: Pro-BNP lawyers]0.45673736601047515
+Title [Prime Minister  remark bad signal for democracy: BNP | 18-party alliance to hold rally June 22]0.3616839680565012
+Title [BNP to let loose after Oct 25 | Plans weekful of agitation if polls-time bill not placed in JS]0.21983955797883456
+Title [Govt disrupts Khaleda's food, water supply: BNP secy general Ruhul Kabir Rizvi]0.14855738860231604
+Title [President Gives Time Today | Khaleda to urge him to weigh in]0.11687772326916657
+Title [Remark about Gopalganj | Case against Khaleda dismissed]0.07893020797246567
+Title [Prime Minister  remark bad signal for democracy: BNP | 18-party alliance to hold rally June 22] 0.060405834705109074
+Title [Initiate talks for all-party polls | Khaleda urges president, gets assurance of his 'efforts within constitutional powers'] 0.05954261779766417
+
+
+*****Cluster Number 3
+
+
+
+Title [Hasina sent to special jail] 0.8345629149872809
+Title [GALLOWS for 14 | Punishment stringent as judge observes it's no usual case of arms recovery] 0.5289042751103185
+Title [NATION MOURNS NELSON MANDELA | Withdraw blockade, Hasina urges Khaleda] 0.3956527991625746
+Title [Bangladesh Premier League 2013-14 | Sk Russel edge Ctg Abahani] 0.36893645263406993
+Title [Graft Case Against Govt Staff | Provision for prior permission illegal | HC observes change to law undermines ACC's independence] 0.36147453389506284
+Title [Repression of Women and Children | Over 18,000 cases recorded last year | Says Steps Towards Development report]' 0.24793563148866404
+Title [Hasina case has an international dimension: Canadian lawyer] 0.2292062528728875
+Title [Hasina in court, hearing resumes]0.05622453390387099
+Title [Hasina asks BB chief for a list of her bank accounts]0.037541161978280044
+Title [AL leader's body found inside residence]0.009030332647132863
+
+
+
+*****Cluster Number 4
+
+Title [War Crimes Trial | Alim appeals for acquittal]0.9593116444002919
+Title [War crimes, 1971 memories and justice]0.6989195681216247
+Title [War Crimes Trial | Justice Kabir retires as tribunal-1 chief | Justice seekers feel gloomy as case against Nizami still to be adjudicated]0.5317956377682163
+Title [18 war crimes charges pressed against Qaiser]0.3810414805591369
+Title [FF barred from testifying in Sayedee case | Defence lawyer tells SC on his appeal against death penalty for war crimes]0.3177849719206999
+Title [Demand of war crimes convicts’ release at rally]0.2644929210758845
+Title [Jamaat 'defector' seeks votes for AL leader Hanif]0.17973060633580157
+Title [It's a plot to kill Nizami | Says Jamaat; 5 hurt as Shibir blasts bomb; BNP to react later]0.12639148663735478
+Title [Mollah execution after midnight | Family meets Jamaat leader in Dhaka jail for last time]0.08605325044674278
+Title [AL leader's body found inside residence | Murder case filed]0.021025685076955115
+
+
+
+
+*****Cluster Number 5
+
+Title [MONEY-LAUNDERING CASE | SC clears way for Tarique, Mamun’s trial]0.9103111651367124
+Title [Hasina of taking care of the expats' wellbeing]0.8820851832283568
+Title [Editorial | ‘All-party’ government in name only | Can't break the impasse Political turmoil over Bangladesh's next general election] 0.6360874749040565
+Title [Contempt of Court Act | Govt not being able to challenge scrapping due to unavailability  of full HC verdict]0.5934007928556202
+Title [Cop Murder on May 5 | Hannan, Khoka denied bail, sent on remand]0.5862346981067971
+Title [Give up politics of destruction | Prime Minister  asks opposition not to hamper education thru' hartals, blockades]0.5666539735942192
+Title [Protect RMG sector from ‘conspiracy’ | Prime Minister  asks owners, workers to work together, opens Batexpo]0.4009956123394761
+Title [Quest for nuke energy begins | Prime Minister  lays foundation stone; stresses safety]0.33233346175265954
+Title [Rampal Plant | Prime Minister  to unveil foundation plaque today] 0.30477395810566177
+ Title [4 militants arrested with arms, ammo | Rab says they belong to Huji offshoot]0.11241941403323973

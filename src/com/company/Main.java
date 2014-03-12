@@ -2,13 +2,16 @@ package com.company;
 
 import com.company.clustering.Clustering;
 import com.company.clustering.MembershipMatrixInitialization;
+import com.company.domain.ClusterCentreEntity;
 import com.company.domain.MembershipEntity;
 import com.company.matsim.GettingDistanceValue;
 import com.company.matsim.KeywordsFileCreation;
 import com.company.matsim.MeasuringSimilarity;
 import com.company.matsim.SimilarityValue;
+import com.company.performance_evaluation.DBICalculation;
 import com.company.performance_evaluation.GettingSortedPages;
 import com.company.performance_evaluation.GettingSynonyms;
+import com.company.performance_evaluation.XIBENYCalculate;
 import com.company.textpreprocessing.TagParsing;
 import edu.mit.jwi.Dictionary;
 import edu.mit.jwi.IDictionary;
@@ -32,17 +35,45 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        // System.out.println("DBI Value using random initial data");
-       /* MeasuringSimilarity.measureSimilarity();
 
 
-        ClusteringVariable.similarityMeasurement="PROPOSED";
+
+
+       // System.out.println("DBI Value using random initial data");
+
+        MeasuringSimilarity.measureSimilarity();
+
+
+        ClusteringVariable.similarityMeasurement = "PROPOSED";
+        ClusteringVariable.dataFrom = "RANDOM";
+        ArrayList<ClusterCentreEntity> clusters = Clustering.clusterValues("RANDOM");
+        System.out.println("DBI Value using random initial data PROPOSED " + DBICalculation.calculateDBI(clusters));
+        System.out.println("XI-BENI Value using random initial data PROPOSED " + XIBENYCalculate.getXIBENI(clusters));
+
+
+       /* ClusteringVariable.dataFrom = "DATA";
+        ArrayList<ClusterCentreEntity> clusters2= Clustering.clusterValues("DATA");
+        System.out.println("DBI Value intial clusters choosen from random PROPOSED " +DBICalculation.calculateDBI(clusters2));
+        System.out.println("XI-Beni Value intial clusters choosen from random PROPOSED " +XIBENYCalculate.getXIBENI(clusters2));*/
+
+
+        ClusteringVariable.similarityMeasurement="JACARD";
+        MeasuringSimilarity.measureSimilarity();
         ClusteringVariable.dataFrom="RANDOM";
-        System.out.println("DBI Value using random initial data PROPOSED "+  Clustering.clusterValues("RANDOM"));
+        System.out.println("DBI Value using random initial data JACARD "+  Clustering.clusterValues("RANDOM"));
         ClusteringVariable.dataFrom="DATA";
-        System.out.println("DBI Value intial clusters choosen from random PROPOSED "+  Clustering.clusterValues("DATA"));*/
+        System.out.println("DBI Value intial clusters choosen from random JACARD "+  Clustering.clusterValues("DATA"));
 
-        String content = "";
+
+        ClusteringVariable.similarityMeasurement="COSINE";
+        MeasuringSimilarity.measureSimilarity();
+        ClusteringVariable.dataFrom="RANDOM";
+        System.out.println("DBI Value using random initial data COSINE "+  Clustering.clusterValues("RANDOM"));
+        ClusteringVariable.dataFrom="DATA";
+        System.out.println("DBI Value intial clusters choosen from random COSINE "+  Clustering.clusterValues("DATA"));
+
+
+     /*   String content = "";
         File memberShipMatrixFile = new File("./results/random.txt");
         FileWriter fw = new FileWriter(memberShipMatrixFile.getAbsoluteFile());
         BufferedWriter bw = new BufferedWriter(fw);
@@ -67,7 +98,7 @@ public class Main {
                 bw.flush();
                 content = "";
             }
-            a= new double[10];
+            a = new double[10];
             bw.newLine();
             bw.newLine();
 
@@ -75,6 +106,7 @@ public class Main {
         }
 
         bw.close();
+*/
 
 
 
@@ -88,20 +120,6 @@ public class Main {
 
 
 
-       /* ClusteringVariable.similarityMeasurement="JACARD";
-        MeasuringSimilarity.measureSimilarity();
-        ClusteringVariable.dataFrom="RANDOM";
-        System.out.println("DBI Value using random initial data JACARD "+  Clustering.clusterValues("RANDOM"));
-        ClusteringVariable.dataFrom="DATA";
-        System.out.println("DBI Value intial clusters choosen from random JACARD "+  Clustering.clusterValues("DATA"));
-
-
-        ClusteringVariable.similarityMeasurement="COSINE";
-        MeasuringSimilarity.measureSimilarity();
-        ClusteringVariable.dataFrom="RANDOM";
-        System.out.println("DBI Value using random initial data COSINE "+  Clustering.clusterValues("RANDOM"));
-        ClusteringVariable.dataFrom="DATA";
-        System.out.println("DBI Value intial clusters choosen from random COSINE "+  Clustering.clusterValues("DATA"));*/
 
 
         //  System.out.print(UpdatingMembershipMatrix.getDistanceBetweenCentroidAndData(3.6,2));

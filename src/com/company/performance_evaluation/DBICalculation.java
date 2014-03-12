@@ -56,6 +56,6 @@ public class DBICalculation
         {
             distance=distance+UpdatingMembershipMatrix.getDistanceBetweenCentroidAndData(clusterCentres.get(clusterNumber-1).clusterCenterValues,i);
         }
-        return distance/ClusteringVariable.numberOfValues;
+        return 1/(distance/ClusteringVariable.numberOfValues);
     }
 }
